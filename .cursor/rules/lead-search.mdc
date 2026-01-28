@@ -1,0 +1,40 @@
+---
+description: Lead search pipeline rules (evidence-first, markdown artifacts, final 20-lead CSV)
+alwaysApply: true
+---
+
+# Lead search process (demi-leads)
+
+## Output contract (must follow)
+- **Intermediate artifacts**: markdown files in `lead-search/<client>/` (auditable, with **source URLs**).
+- **Final deliverable**: `lead-search/<client>/leads.csv` containing **20 named leads** (people + roles) with reasoning and evidence URL.
+
+## Evidence policy (hard rule)
+- Never write bare claims. Every extracted fact must include a `source_url` (or `evidence_urls[]`).
+- Prefer **official event exhibitor detail pages** as the primary evidence primitive.
+- Do not fabricate employee counts; unknown must be `null`.
+
+## Required artifact sequence (keep filenames)
+Create and maintain these files under `lead-search/<client>/`:
+1. `00-sources.md`
+2. `01-exhibitors-raw.md`
+3. `02-exhibitors-clean.md`
+4. `03-fit-screening.md`
+5. `04-market-filter.md`
+6. `05-prioritized-companies.md`
+7. `06-personas.md`
+8. `leads.csv`
+
+## Working definitions
+- **CONEXPO** means CONEXPO-CON/AGG and its official exhibitor directory (for the relevant year).
+- **US market**: HQ in US or major US operations.
+- **DACH market**: HQ in Germany/Austria/Switzerland or major operations there.
+- **Company size**: small <200; large ≥200; unknown treated as small until verified.
+
+## Persona targeting rules
+- **Small**: prioritize **R&D / Engineering leadership** (hydraulics/fluid power-related).
+- **Large**: prioritize **Strategic Procurement / Sourcing** and **R&D Hydraulics / Fluid Technology**.
+
+## CSV schema (must match)
+`number,first_names,last_name,company_name,industry,position,market,country_hq,employee_count,size_segment,buyer_fit,hydraulics_relevance,score,reasoning,source_url`
+
