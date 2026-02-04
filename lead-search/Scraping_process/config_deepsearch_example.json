@@ -1,0 +1,26 @@
+{
+  "chunk_size": 5,
+  "rows_per_query": 10,
+  "queries": [
+    {
+      "product": "EnviroFALK HSC Hochschrankanlage",
+      "target_market": "Deutschland",
+      "target_industry": "Krankenhäuser und Kliniken",
+      "country": "DE",
+      "typ": 3,
+      "persona": "Hygieneverantwortlicher Krankenhaus",
+      "rows_per_query": 10,
+      "estimated_market_size": 60
+    },
+    {
+      "product": "DataCollect RSD Seitenradar",
+      "target_market": "Süddeutschland",
+      "target_industry": "Öffentliche Verwaltung / Ordnungsämter",
+      "country": "DE",
+      "typ": 3,
+      "persona": "Ordnungsamtleitung Süddeutschland",
+      "rows_per_query": 10,
+      "estimated_market_size": 140
+    }
+  ]
+}

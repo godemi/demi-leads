@@ -1,0 +1,14 @@
+# Node dependencies
+**/node_modules/
+
+# Generated outputs (scraping process)
+lead-search/Scraping_process/out/
+lead-search/Scraping_process/playwright-report/
+lead-search/Scraping_process/test-results/
+
+# Local Cursor MCP config (machine-specific)
+.cursor/mcp.json
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
