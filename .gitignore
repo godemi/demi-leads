@@ -11,4 +11,5 @@ lead-search/Scraping_process/test-results/
 
 # OS / editor noise
 .DS_Store
+**/.DS_Store
 Thumbs.db
